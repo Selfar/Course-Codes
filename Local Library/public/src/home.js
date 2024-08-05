@@ -10,7 +10,7 @@ function getBooksBorrowedCount(books) {
 	let borrowed = 0;
 
 	books.forEach((book) => {
-		book.borrows.forEach((borrow) => {
+		book.borrows.filter((borrow) => {
 			if (!borrow.returned) {
 				borrowed++;
 			}
